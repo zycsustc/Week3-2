@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document1</title>
+    <style>
+        .sign-in, .sign-in td {
+            border-width: 2px;
+            border-color: black;
+            border-style: solid;
+        }
+    </style>
+    <script>
+        function signIn()
+        {
+        var name = document.getElementById("user-name");
+        var password = document.getElementById('user-password');
+        if((name.value === '123')&&(password.value === '123')){
+            alert('Successfully signed in !')
+        }
+        else{
+            alert('Wrong user-name and password !');
+            name.value = '';
+            password.value = '';
+        }
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <table class="sign-in">
+            <tr>
+              <td>Name:</td>
+              <td><input id="user-name" type="text"></td>
+            </tr>
+            <tr>
+              <td>PassWord:</td>
+              <td><input id="user-password" type="text"></td>
+             </tr>
+        </table>
+    </div>
+    <div>
+        <button onclick="signIn()">Sign In</button>
+        <p id="demo"></p>
+    </div>
+</body>
+</html>
